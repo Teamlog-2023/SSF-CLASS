@@ -6,8 +6,8 @@
 // };
 
 // 프로퍼티 선택 예제
-// document.write(`${game.fps}<br>`);
-// document.write(`${game["rpg"]}<br>`);
+// console.log(game.fps);
+// console.log(game["rpg"]);
 // 프로퍼티 삭제 예제
 // console.log(`삭제 전 : ${game}`)
 // delete game.aos;
@@ -85,88 +85,10 @@
 // document.body.appendChild(p);
 
 // Event Handler
-var press = document.querySelector("html");
-press.addEventListener("keypress", type);
-function type(e) {
-    if (e.key == "a") {
-        document.getElementById("사진").src = "image/a.jpg";
-    }
-    else if (e.key == "b") {
-        document.getElementById("사진").src = "image/b.jpg";
-    }
-    else if (e.key == "c") {
-        document.getElementById("사진").src = "image/c.jpg";
-    }
-    else if (e.key == "d") {
-        document.getElementById("사진").src = "image/d.jpg";
-    }
-    else if (e.key == "e") {
-        document.getElementById("사진").src = "image/e.jpg";
-    }
-    else if (e.key == "f") {
-        document.getElementById("사진").src = "image/f.jpg";
-    }
-    else if (e.key == "g") {
-        document.getElementById("사진").src = "image/g.jpg";
-    }
-    else if (e.key == "h") {
-        document.getElementById("사진").src = "image/h.jpg";
-    }
-    else if (e.key == "i") {
-        document.getElementById("사진").src = "image/i.jpg";
-    }
-    else if (e.key == "j") {
-        document.getElementById("사진").src = "image/j.jpg";
-    }
-    else if (e.key == "k") {
-        document.getElementById("사진").src = "image/k.jpg";
-    }
-    else if (e.key == "l") {
-        document.getElementById("사진").src = "image/l.jpg";
-    }
-    else if (e.key == "m") {
-        document.getElementById("사진").src = "image/m.jpg";
-    }
-    else if (e.key == "n") {
-        document.getElementById("사진").src = "image/n.jpg";
-    }
-    else if (e.key == "o") {
-        document.getElementById("사진").src = "image/o.jpg";
-    }
-    else if (e.key == "p") {
-        document.getElementById("사진").src = "image/p.jpg";
-    }
-    else if (e.key == "q") {
-        document.getElementById("사진").src = "image/q.jpg";
-    }
-    else if (e.key == "r") {
-        document.getElementById("사진").src = "image/r.jpg";
-    }
-    else if (e.key == "s") {
-        document.getElementById("사진").src = "image/s.jpg";
-    }
-    else if (e.key == "t") {
-        document.getElementById("사진").src = "image/t.jpg";
-    }
-    else if (e.key == "u") {
-        document.getElementById("사진").src = "image/u.jpg";
-    }
-    else if (e.key == "v") {
-        document.getElementById("사진").src = "image/v.jpg";
-    }
-    else if (e.key == "w") {
-        document.getElementById("사진").src = "image/w.jpg";
-    }
-    else if (e.key == "x") {
-        document.getElementById("사진").src = "image/x.jpg";
-    }
-    else if (e.key == "y") {
-        document.getElementById("사진").src = "image/y.jpg";
-    }
-    else if (e.key == "z") {
-        document.getElementById("사진").src = "image/z.jpg";
-    }
-    else {
-        document.getElementById("사진").src = "image/no_image.jpg";
-    }
+function change() {
+    var arr = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+    var random_image = (Math.random()*100).toFixed(0);
+    document.getElementById("사진").src = `image/${arr[random_image % 26]}.jpg`;
+    // document.getElementById("사진").src = `image/${arr[0]}.jpg`
+    // console.log(arr[0]);
 }

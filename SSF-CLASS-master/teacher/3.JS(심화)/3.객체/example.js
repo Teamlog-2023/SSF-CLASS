@@ -85,10 +85,15 @@
 // document.body.appendChild(p);
 
 // Event Handler
+var sword = 1;
 function change() {
-    var arr = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
-    var random_image = (Math.random()*100).toFixed(0);
-    document.getElementById("사진").src = `image/${arr[random_image % 26]}.jpg`;
-    // document.getElementById("사진").src = `image/${arr[0]}.jpg`
-    // console.log(arr[0]);
+    if (sword == 14) {
+        alert("검을 전부 소유함!");
+    }
+    else {
+        sword_image = document.createElement("img")
+        sword_image.src = `image/${sword++}.png`;
+        sword_image.width = "200"
+        document.body.appendChild(sword_image);
+    }
 }

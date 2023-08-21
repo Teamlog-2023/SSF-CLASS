@@ -46,14 +46,14 @@ function updateWeaponInfo() {
 
   equipImg.src = `./public/images/swords/${______}`; //이미지 경로에 어떤 변수가 들어갈까요?
   equipName.textContent = `+${enhanceLevel +1} ${______}`; //무기 이름에 어떤 변수가 들어갈까요?
-  equipDetail.______ = `성공 확률 `+(weapon.upsuccess * 100).toFixed(0)+`%`; //요소의 무엇을 정의하는 걸까요?
+  equipDetail.______ = `성공 확률 `+(weapon.upsuccess * 100).______+`%`; //요소의 무엇을 정의하는 걸까요?
 }
 
 updateWeaponInfo();
 
 function sellWeapon() {
   const weapon = sword[enhanceLevel];
-  money += weapon.______; //소지금에 어떤 값을 더해야 할까요?
+  money += ______; //소지금에 어떤 값을 더해야 할까요?
   ______ = 0; //무기를 판매하면 어떤 값을 초기화해야 할까요?
   updateWeaponInfo();
 }
@@ -61,10 +61,10 @@ function sellWeapon() {
 function enhanceWeapon() {
   const weapon = sword[enhanceLevel];
   if (money >= weapon.upcost) {
-    const isSuccess = Math.random() < weapon.______; //생성된 강화 확률과 어떤 값을 비교해야 할까요?
+    const isSuccess = Math.random() < _______; //생성된 강화 확률과 어떤 값을 비교해야 할까요?
     if (______) {  //조건문의 인수로 어떤 값이 들어가야 할까요?
       enhanceLevel += 1;
-      money -= weapon.______; //소지금에 어떤 값만큼 빼야 할까요? 
+      money -= __________; //소지금에 어떤 값만큼 빼야 할까요? 
     } else { 
       enhanceLevel = 0; 
       ______(`강화 실패!`); //알림창을 띄우려면 어떤 메소드를 써야 할까요?

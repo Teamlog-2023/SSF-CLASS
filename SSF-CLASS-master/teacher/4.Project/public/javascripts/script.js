@@ -36,7 +36,7 @@ function updateWeaponInfo() {
   const weapon = sword[enhanceLevel]; // 현재 강화 상태에 해당하는 무기 정보 가져오기
   document.getElementById('moneyValue').textContent = `${money.toLocaleString()} 원`; // 화면에 소지금 표시
   document.getElementById('sellCost').textContent = `${weapon.sellcost.toLocaleString()} 원`; // 화면에 판매 가격 표시
-  document.getElementById('enhanceCost').textContent = `${weapon.upcost.toLocaleString()} 원`; // 화면에 강화 가격 표시
+  document.getElementById('upCost').textContent = `${weapon.upcost.toLocaleString()} 원`; // 화면에 강화 가격 표시
   document.getElementById('inventoryCount').textContent = `총 ${inventory.length}개`; // 화면에 보유한 무기 개수 표시
 
   //검 이미지, 이름 , 성공확률 표시할 요소 가져오기
@@ -62,7 +62,7 @@ function updateWeaponInfo() {
 
   equipImg.src = `./public/images/swords/${weapon.img}`; // 무기 이미지 업데이트
   equipName.textContent = `+${enhanceLevel +1} ${weapon.name}`; // 무기 이름 업데이트
-  equipDetail.textContent = `성공 확률 `+(weapon.upsuccess * 100).toFixed(0)+`%`; // 무기 강화 성공 확률 업데이트
+  equipDetail.textContent = `성공 확률 ${(weapon.upsuccess * 100).toFixed(0)}%`; // 무기 강화 성공 확률 업데이트
 }
 
 // 초기 무기 정보를 표시

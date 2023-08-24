@@ -46,7 +46,7 @@ function updateWeaponInfo() {
   //이름을 표시할 요소 가져오기
   const equipName = innerBox.querySelector('.name');
   //성공확률을 표시할 요소 가져오기
-  const equipDetail = innerBox.querySelector('.upsuccess');
+  const equipDetail = innerBox.querySelector('.detail');
 
   if (inventory.length <= enhanceLevel) { // 도감에 무기가 없으면
     // 보유한 무기 도감에 새로운 무기 추가

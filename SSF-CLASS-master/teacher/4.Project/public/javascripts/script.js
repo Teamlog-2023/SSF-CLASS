@@ -1,109 +1,90 @@
-// 무기 정보를 담고 있는 배열
 const sword = [
-  // 각 강화 별 검의 강화 가격, 강화 성공 확률, 판매 가격 정의
-  { upcost: 1000, upsuccess: 0.99, sellcost: 0, img: "1.png", name : "나뭇가지"}, //1강화 검 정보
-  { upcost: 1500, upsuccess: 0.95, sellcost: 1000, img: "2.png", name : "목검"}, //2강화 검 정보
-  { upcost: 2000, upsuccess: 0.9, sellcost: 1500, img: "3.png", name : "장미칼"}, //3강화 검 정보
-  { upcost: 2500, upsuccess: 0.85, sellcost: 2000, img: "4.png", name : "프로스트 블레이드"}, //4강화 검 정보
-  { upcost: 3000, upsuccess: 0.8, sellcost: 3000, img: "5.png", name : "트윈 슬래셔"}, //5강화 검 정보
-  { upcost: 3500, upsuccess: 0.75, sellcost: 4000, img: "6.png", name : "용의 송곳"}, //6강화 검 정보
-  { upcost: 4000, upsuccess: 0.7, sellcost: 5000, img: "7.png", name : "바나나"}, //7강화 검 정보 
-  { upcost: 4500, upsuccess: 0.65, sellcost: 10000, img: "8.png", name : "VIP TeamLog Express"}, //8강화 검 정보
-  { upcost: 5000, upsuccess: 0.6, sellcost: 20000, img: "9.png", name : "쉐도우 블레이드"}, //9강화 검 정보
-  { upcost: 5500, upsuccess: 0.55, sellcost: 30000, img: "10.png", name : "X카츄"}, //10강화 검 정보
-  { upcost: 6000, upsuccess: 0.5, sellcost: 40000, img: "11.png", name : "악마의 혀"}, //11강화 검 정보
-  { upcost: 6500, upsuccess: 0.45, sellcost: 50000, img: "12.png", name : "무한검"}, //12강화 검 정보
-  { upcost: 7000, upsuccess: 0.4, sellcost: 60000, img: "13.png", name : "붉은 망치"}, //13강화 검 정보
-  { upcost: 7500, upsuccess: 0.35, sellcost: 80000, img: "14.png", name : "사신의 낫"}, //14강화 검 정보
-  { upcost: 8000, upsuccess: 0.3, sellcost: 1000000, img: "15.png", name : "TeamLog검"}, //15강화 검 정보
-];
+  { upcost: 1000, 
+    upsuccess: 0.99, 
+    sellcost: 0, 
+    img: "1.png", 
+    name : "나뭇가지"}, //다른 검의 정보들을 참고해 빈칸을 채워보세요!
+  { upcost: 1500, upsuccess: 0.95, sellcost: 1000, img: "2.png", name : "목검"}, 
+  { upcost: 2000, upsuccess: ______, sellcost: 1500, img: "3.png", name : "장미칼"}, 
+  { upcost: 2500, upsuccess: 0.85, sellcost: 2000, img: "4.png", name : "프로스트 블레이드"}, 
+  { upcost: 3000, upsuccess: 0.8, sellcost: ______, img: "5.png", name : "트윈 슬래셔"}, 
+  { upcost: ______, upsuccess: 0.75, sellcost: 4000, img: "6.png", name : "용의 송곳"}, 
+	{ upcost: 4000, upsuccess: 0.7, sellcost: 5000, img: "7.png", name : "바나나"},
+  { upcost: 4500, upsuccess: 0.65, sellcost: 10000, img: "8.png", name : "VIP TeamLog Express"}, 
+  { upcost: 5000, upsuccess: 0.6, sellcost: ______, img: "9.png", name : "쉐도우 블레이드"}, 
+  { upcost: 5500, upsuccess: 0.55, sellcost: 30000, img: "10.png", name : "X카츄"}, 
+  { upcost: ______, upsuccess: 0.5, sellcost: 40000, img: "11.png", name : "악마의 혀"}, 
+  { upcost: 6500, upsuccess: 0.45, sellcost: 50000, img: "12.png", name : "무한검"},
+  { upcost: 7000, upsuccess: ______, sellcost: 60000, img: "13.png", name : "붉은 망치"},   
+  { upcost: 7500, upsuccess: 0.35, sellcost: 80000, img: "14.png", name : "사신의 낫"}, 
+  { upcost: 8000, upsuccess: 0.3, sellcost: 1000000, img: "15.png", name : "TeamLog검"}, 
+];  
 
-// upcost: 강화에 필요한 비용
-// upsuccess: 강화에 성공할 수 있는 확률
-// sellcost: 판매해서 얻을 수 있는 금액
-// img: 이미지 경로에 쓰일 이미지 이름
-// name: 무기 이름
-
-// 무기 도감 정보를 담고 있는 배열
 const inventory = [];
 
-// 강화 상태와 소지금 정보를 저장하는 변수
-let enhanceLevel = 0; // 현재 무기의 강화 상태 (0강, 1강, ...)
-let money = 200000; // 플레이어의 소지금
+______ enhanceLevel = 0; //값이 변할 수 있는 변수는 어떻게 선언할까요?
+______ money = 200000;
 
-// 무기 정보를 화면에 업데이트하는 함수
-function updateWeaponInfo() {
-  const weapon = sword[enhanceLevel]; // 현재 강화 상태에 해당하는 무기 정보 가져오기
-  document.getElementById('moneyValue').textContent = `${money.toLocaleString()} 원`; // 화면에 소지금 표시
-  document.getElementById('sellCost').textContent = `${weapon.sellcost.toLocaleString()} 원`; // 화면에 판매 가격 표시
-  document.getElementById('upCost').textContent = `${weapon.upcost.toLocaleString()} 원`; // 화면에 강화 가격 표시
-  document.getElementById('inventoryCount').textContent = `총 ${inventory.length}개`; // 화면에 보유한 무기 개수 표시
+function updateWeaponInfo() { 
+  const weapon = sword[______]; //sword 배열의 인덱스를 어떤 값으로 해야 할까요?
+  document.getElementById('______').textContent = `${money} 원`; //원하는 값을 나타내기 위해 HTML 문서에서 각각 어떤 id를 가진 요소를 불러와야 할까요?
+  document.getElementById('______').textContent = `${weapon.sellcost} 원`;
+  document.getElementById('______').textContent = `${weapon.upcost} 원`; 
+  document.getElementById('______').textContent = `총 ${inventory.length}개`;
 
-  //검 이미지, 이름 , 성공확률 표시할 요소 가져오기
-  const innerBox = document.querySelector('.inner_box');
-  //이미지 표시할 요소 가져오기
-  const equipImg = innerBox.querySelector('img');
-  //이름을 표시할 요소 가져오기
-  const equipName = innerBox.querySelector('.name');
-  //성공확률을 표시할 요소 가져오기
-  const equipDetail = innerBox.querySelector('.detail');
+  const innerBox = document.______('.inner_box'); //HTML 문서에서 속성을 참조해 요소를 가져오려면 어떻게 할까요?
+  const equipImg = innerBox.______('img');
+  const equipName = innerBox.______('.name');
+  const equipDetail = innerBox.______('.enhanceCost');
 
-  if (inventory.length <= enhanceLevel) { // 도감에 무기가 없으면
-    // 보유한 무기 도감에 새로운 무기 추가
-    inventory.push(weapon);
-    
-    // 도감의 무기를 표시
-    const itemWrapper = document.querySelector('.item_wrapper'); //무기 아이템을 표시할 dom요소
-    const newItem = document.createElement('div'); //새로운 무기 아이템을 추가할 dom요소
-    newItem.className = 'item'; //새로운 무기 아이템의 클래스 이름
-    newItem.innerHTML = `<img src="./public/images/swords/${weapon.img}" />`; //새로운 무기의 이미지 주소
-    itemWrapper.appendChild(newItem); //새로운 무기 아이템을 추가
+  equipImg.src = `./public/images/swords/${______}`; //이미지 경로에 어떤 변수가 들어갈까요?
+  equipName.textContent = `+${enhanceLevel +1} ${______}`; //무기 이름에 어떤 변수가 들어갈까요?
+  equipDetail.textContent = `성공확률 ${(weapon.upsuccess * 100).toFixed(0)}%`;
+  
+  if (inventory.length <= enhanceLevel) { 
+    inventory.______(weapon); //배열에 값을 추가하려면 어떻게 할까요?
+
+    const itemWrapper = document.querySelector('.item_wrapper'); 
+    const newItem = document.______('div'); //새로운 요소를 추가하려면 어떻게 하나요?
+    newItem.className = 'item';
+
+    newItem.innerHTML = `<img src="./public/images/swords/${______}" />`; //검의 이미지 경로를 설정하려면 어떻게 할까요?
+    itemWrapper.______(newItem); //하위 요소로 추가하려면 어떻게 하나요?
   }
 
-  equipImg.src = `./public/images/swords/${weapon.img}`; // 무기 이미지 업데이트
-  equipName.textContent = `+${enhanceLevel +1} ${weapon.name}`; // 무기 이름 업데이트
-  equipDetail.textContent = `성공 확률 ${(weapon.upsuccess * 100).toFixed(0)}%`; // 무기 강화 성공 확률 업데이트
 }
 
-// 초기 무기 정보를 표시
 updateWeaponInfo();
 
-// "판매하기" 버튼 클릭 시 호출되는 함수
 function sellWeapon() {
-  const weapon = sword[enhanceLevel]; // 현재 강화 상태에 해당하는 무기 정보 가져오기
-  money += weapon.sellcost; // 무기를 판매하여 소지금에 판매 가격 추가
-  // 판매 후 장비 초기화
-  enhanceLevel = 0; // 강화 상태 초기화
-  updateWeaponInfo(); // 무기 정보 화면 업데이트
+  const weapon = sword[enhanceLevel];
+  money += ______; //소지금에 어떤 값을 더해야 할까요?
+  ______ = 0; //무기를 판매하면 어떤 값을 초기화해야 할까요?
+  updateWeaponInfo();
 }
 
-// "강화하기" 버튼 클릭 시 호출되는 함수
 function enhanceWeapon() {
-  const weapon = sword[enhanceLevel]; // 현재 강화 상태에 해당하는 무기 정보 가져오기
-  if (money >= weapon.upcost) { // 소지금이 강화 비용보다 크거나 같으면 강화 가능
-    // 강화 성공 여부 결정
-    const isSuccess = 0 < weapon.upsuccess;
-    if (isSuccess) { // 강화 성공
-      enhanceLevel++; // 강화 상태 업데이트
-      money -= weapon.upcost; // 강화 비용 차감
-    } else { // 강화 실패
-      enhanceLevel = 0; // 강화 상태 초기화
-      alert(`강화 실패!`); //강화 실패 알림창
-    }
-  } else { // 소지금 부족하여 강화 불가능
-    alert('소지금이 부족합니다.'); //소지금 부족 알림창
+  const weapon = sword[enhanceLevel];
+  if (money >= weapon.upcost) {
+    const isSuccess = Math.random() < _______; //생성된 강화 확률과 어떤 값을 비교해야 할까요?
+    if (______) {  //조건문의 조건식으로 어떤 값이 들어가야 할까요?
+      enhanceLevel += 1;
+      money -= __________; //소지금에 어떤 값만큼 빼야 할까요?
+    } else { 
+      enhanceLevel = 0; 
+      alert(`강화 실패!`);
+    } 
+  } else {
+    alert('소지금이 부족합니다.');
   }
-  updateWeaponInfo(); // 무기 정보 화면 업데이트
+  updateWeaponInfo();
+  
+  const inventoryCount = inventory.length;
+  if (inventory.length <= ______) { //무기 목록의 길이와 어떤 값을 비교해야 할까요?
+    inventoryCount += 1;
+  }
 
-  // 보유한 무기 개수를 올바르게 업데이트합니다.
-  const inventoryCount = inventory.length; //무기 목록 길이 저장
-    if (inventory.length <= enhanceLevel) { //현재 무기 목록 길이와 강화단계 비교
-      inventoryCount += 1; //무기 목록의 무기 개수 1 추가
-    }
-
-  document.getElementById('inventoryCount').textContent = `총 ${inventoryCount}개`; // 화면에 보유한 무기 개수 표시
-
+  document.getElementById('inventoryCount').textContent = `총 ${inventoryCount}개`;
 }
 
-// 초기 무기 정보를 표시
 updateWeaponInfo();

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DOM 알아보기</title>
+        <style>
+            #club{
+                color:red;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>DOM 실습해보기</h1>
+        <p id="p"> 
+            <strong>Document Object Model</strong>의 줄임말입니다.
+        </p>
+
+        <hr>
+
+        <h1>이벤트 핸들러 실습해보기</h1>
+        <h1 id="club">Layer7</h1>
+        <button onclick="convert()">팀로그</button> 
+        <button onclick="change()">검 추가!</button>
+        
+        <hr>
+        
+        <h1>innerHTML vs textContent</h1>
+        <h2 id="teamlog">
+            2023 SSF!
+            <p>Javascript로 검 강화 게임 만들기!</p>
+        </h2>
+
+        <button onclick="InnerHTML()">innerHTML</button>
+        <button onclick="TextContent()">textContent</button>
+        
+        <script src="3.dom.js"></script>
+    </body>
+</html>

@@ -1,0 +1,203 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font-family: 'SUITE Variable', sans-serif;
+  overflow: hidden;
+}
+
+button {
+  cursor: pointer;
+  background-color: none;
+  border: none;
+}
+
+.wrapper  {
+  width: 100%;
+  height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.circle {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  border: 1px solid #EAEAEA;
+  border-radius: 1000px;
+  background-color: transparent;
+  z-index: -1;
+}
+
+.circle:nth-child(1) {
+  width: 80%;
+  aspect-ratio: 1;
+}
+
+.circle:nth-child(2) {
+  width: 60%;
+  aspect-ratio: 1;
+}
+
+.circle:nth-child(3) {
+  width: 40%;
+  aspect-ratio: 1;
+}
+
+.container {
+  width: 60%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.money {
+  border: 1px solid #C9C9C9;
+  background-color: white;
+  border-radius: 12px;
+  padding: 8px 14px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.money p:first-child {
+  font-size: 14px;
+  font-weight: 600;
+  color: #B7B7B7;
+}
+
+.row {
+  display: flex;
+  gap: 24px;
+  width: 100%;
+}
+
+.box {
+  border: 1px solid #B3B3B3;
+  border-radius: 12px;
+  padding: 20px;
+  flex: 1;
+  background-color: white;
+}
+
+.inner_box {
+  border: 1px solid #CFCFCF;
+  border-radius: 16px;
+  padding: 0 12px;
+  
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.inner_box img {
+  width: 112px;
+  aspect-ratio: 1;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.column p:first-child {
+  font-size: 18px;
+  font-weight: 600;
+  color: #B7B7B7;
+}
+
+.column .name {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1C1C1C;
+}
+
+.column .detail {
+  font-size: 18px;
+  font-weight: 600;
+  color: #FF5621;
+}
+
+.column .detail strong {
+  font-weight: 800;
+}
+
+.box_top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.box_top p:first-child {
+  font-size: 18px;
+  color: #B7B7B7;
+  font-weight: 600;
+}
+
+.box .count {
+  font-size: 18px;
+  color: #FF7E21;
+  font-weight: 700;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 7px;
+  border-radius: 12px;
+  background: #FFF2F0;
+}
+
+.item_wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.item img {
+  width: 46px;
+  aspect-ratio: 1;
+}
+
+.button_wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.button {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: #FF5621;
+  font-size: 18px;
+  font-weight: 700; 
+  color: white;
+  padding: 10px 0;
+}
+
+.text_wrapper {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
